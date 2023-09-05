@@ -1,4 +1,5 @@
 import { propTypes } from "react-bootstrap/esm/Image";
+import FeedbackItems from "./FeedbackItems";
 
 const Header = ({ text, bgColor, textColor }) => {
   const headerColor = {
@@ -19,6 +20,10 @@ Header.defaultProps = {
   bgColor: "rgba(0, 0, 0, 0.4)",
   textColor: "#ff6a95 ",
 };
-Header.protoTypes = { text: propTypes.string };
+Header.protoTypes = {
+  text: propTypes.string,
+  bgColor: propTypes.string,
+  textColor: propTypes.string,
+};
 
 export default Header;
