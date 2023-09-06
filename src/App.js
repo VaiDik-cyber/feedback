@@ -5,6 +5,7 @@ import FeedbackList from "./components/FeedbackList";
 
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
+  console.log(feedback);
   return (
     <>
       <Header></Header>

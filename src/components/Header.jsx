@@ -1,5 +1,4 @@
 import { propTypes } from "react-bootstrap/esm/Image";
-import FeedbackItems from "./FeedbackItems";
 
 const Header = ({ text, bgColor, textColor }) => {
   const headerColor = {
