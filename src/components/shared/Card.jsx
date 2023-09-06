@@ -1,7 +1,8 @@
+import { FaTimes } from "react-icons/fa";
 import PropTypes from "prop-types";
 import React from "react";
 
-const Card = ({ children, reverse }) => {
+const Card = ({ children, reverse, handleClick }) => {
   return (
     // <div className={`card ${reverse && "reverse"}`}>
     <div
@@ -12,6 +13,9 @@ const Card = ({ children, reverse }) => {
       }}
     >
       <div className="num-display">{children.rating}</div>
+      <button onClick={handleClick} className="close">
+        <FaTimes color="purple"></FaTimes>
+      </button>
       <div className="text-display">{children.text}</div>
     </div>
     // </div>
