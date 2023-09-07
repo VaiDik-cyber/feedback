@@ -1,4 +1,3 @@
-import { FaTimes } from "react-icons/fa";
 import PropTypes from "prop-types";
 import React from "react";
 
@@ -12,11 +11,7 @@ const Card = ({ children, reverse, handleClick }) => {
         color: reverse ? "#fff" : "#000",
       }}
     >
-      <div className="num-display">{children.rating}</div>
-      <button onClick={handleClick} className="close">
-        <FaTimes color="purple"></FaTimes>
-      </button>
-      <div className="text-display">{children.text}</div>
+      {children}
     </div>
     // </div>
   );
@@ -27,7 +22,7 @@ Card.defaultProps = {
 };
 
 Card.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: PropTypes.node.isRequired,
   reverse: PropTypes.bool,
 };
 
