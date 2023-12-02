@@ -9,6 +9,7 @@ export const FeedbackProvider = ({ children }) => {
     item: {},
     edit: false,
   });
+  const [isloading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetchFeedback();
@@ -21,6 +22,7 @@ export const FeedbackProvider = ({ children }) => {
     );
     const data = await response.json();
     setFeedback(data);
+    setIsLoading(false);
   };
 
   //Add Feedback
@@ -60,6 +62,7 @@ export const FeedbackProvider = ({ children }) => {
       value={{
         feedback,
         feedbackEdit,
+        isloading,
         deleteFeedback,
         addFeedback,
         editFeedback,
